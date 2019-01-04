@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConnectionScreen</class>
+ <widget class="QWidget" name="ConnectionScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>291</width>
+    <height>124</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Connection</string>
+  </property>
+  <widget class="QPushButton" name="ConnectMotor">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>20</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="MotorPort">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>20</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>COM9</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Motor">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Motor:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sensor">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sensors:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="SensorPort">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>50</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>COM31</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ConnectSensor">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>50</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ConnectECU">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>80</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ECUPort">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>COM24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ECU">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ECU:</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ConnectMotor</sender>
+   <signal>released()</signal>
+   <receiver>ConnectionScreen</receiver>
+   <slot>motor_cb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ConnectSensor</sender>
+   <signal>released()</signal>
+   <receiver>ConnectionScreen</receiver>
+   <slot>sensor_cb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ConnectECU</sender>
+   <signal>released()</signal>
+   <receiver>ConnectionScreen</receiver>
+   <slot>ECU_cb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MotorPort</sender>
+   <signal>returnPressed()</signal>
+   <receiver>ConnectionScreen</receiver>
+   <slot>motor_cb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SensorPort</sender>
+   <signal>returnPressed()</signal>
+   <receiver>ConnectionScreen</receiver>
+   <slot>sensor_cb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ECUPort</sender>
+   <signal>returnPressed()</signal>
+   <receiver>ConnectionScreen</receiver>
+   <slot>ECU_cb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>motor_cb()</slot>
+  <slot>sensor_cb()</slot>
+  <slot>ECU_cb()</slot>
+ </slots>
+</ui>
