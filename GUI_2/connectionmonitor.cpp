@@ -410,7 +410,6 @@ void ConnectionMonitor::ReadBuffer(void)
             {
                 data16 = (static_cast<int>(data[0])&0xFF)+((static_cast<int>(data[1])&0xFF)<<8) ;
                 extAngle_cb(data16) ;
-                cout<<"Sensor: "<<data16<<endl;
             }
             break;
         default: break;

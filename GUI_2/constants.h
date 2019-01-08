@@ -13,17 +13,17 @@
 #define EFFICIENCY          0.95
 #define WHEEL_DIAMETER      0.508           //[m]
 #define MU                  0.7
-#define CAR_MASS            300             //[kg]
+#define CAR_MASS            30              //[kg]
 #define FN                  (CAR_MASS*9.81) //[N]
-#define DELTA_T             0.01           //[s]
+#define DELTA_T             0.1             //[s]
 #define WHEEL_BASE          1.525           //[m]
-#define BREAK_FACTOR        600             //[N]
-#define BREAK_FACTOR_M      300             //[N]
+#define BREAK_FACTOR        6000            //[N]
+#define BREAK_FACTOR_M      3000            //[N]
 #define TRACKWIDTH_FRONT    1.5             //[m]
 #define TRACKWIDTH_REAR     1.5             //[m]
 #define INITIAL_CHARGE      450000          //[J]
 
-#define FRICTION            0.1             //[m/s^2]
+#define FRICTION            1               //[m/s^2]
 #define LOSS                1               //[J/ms]
 #define SLIP_SPEED          0.001           //[-]
 

@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#define CONVERT_ANGLE           640
+
 CockpitScreen::CockpitScreen(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CockpitScreen)
@@ -58,7 +60,8 @@ void CockpitScreen::setStartButton(bool simulate)
 void CockpitScreen::setSteering(int angle)
 {
     if(!useSlider)
-        ui->SteeringWheel->setValue(angle*MAX_STEERING_WHEEL/MAX_VAL) ;
+        ui->SteeringWheel->setValue((angle-MAX_VAL_2)/CONVERT_ANGLE+50) ;
+    std::cout<<"Sensor: "<<((angle-MAX_VAL_2)/CONVERT_ANGLE+50)<<std::endl;
 }
 
 //private slots

@@ -96,6 +96,7 @@ void useEpuck_cb(int use)
 void steering_cb(int SteeringAngle)
 {
     SteeringAngle = SteeringAngle*MAX_VAL/MAX_STEERING_WHEEL;
+
     if(!UseEpuck)
         Simulation->setSteeringAngle(SteeringAngle) ;
 }
@@ -118,7 +119,10 @@ void state_cb(uint8_t data)
 void angle_cb(uint16_t data)
 {
     if(UseEpuck)
+    {
         Simulation->setSteeringAngle(data) ;
+        Cockpit->setSteering(data) ;
+    }
 }
 
 void quit_cb(void)
